@@ -36,6 +36,7 @@ const storage = diskStorage({
           transport: Transport.TCP,
           options: {
             host: config.get('USER_SERVICE_HOST'),
+            port: config.get('USER_SERVICE_PORT'),
           },
         }),
 
