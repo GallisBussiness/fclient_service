@@ -30,7 +30,7 @@ async function bootstrap() {
   );
   const config = app.get(ConfigService);
 
-  const port = config.get('NEST_PORT');
+  const port = process.env.PORT || config.get('NEST_PORT');
   await app.listen(port, () =>
     logger.log(
       `Service client starting on port ${port} and listening for all microservices !!`,
